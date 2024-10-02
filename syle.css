@@ -1,0 +1,135 @@
+:root {
+  /* Primary */
+
+  --SoftBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+
+  --veryDarkBlueMainBG: hsl(217, 54%, 11%);
+  --veryDarkBlueCardBG: hsl(216, 50%, 16%);
+  --veryDarkBlueLine: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--veryDarkBlueMainBG);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 370px;
+  background-color: var(--veryDarkBlueCardBG);
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .container {
+  padding: 20px;
+}
+main .image {
+  background-color: var(--cyan);
+  border-radius: 10px;
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60px;
+}
+main .image .equilibrium {
+  display: block;
+  max-width: 100%;
+  border-radius: inherit;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+main .equilibrium:hover {
+  filter: opacity(0.3);
+}
+main .content h1 {
+  color: var(--white);
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+main .content h1:hover {
+  color: var(--cyan);
+}
+main .content .description {
+  color: var(--SoftBlue);
+  line-height: 1.5;
+  font-weight: 300;
+}
+main .content .date {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .content .date div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+main .content hr {
+  border: 0;
+  border: 1px solid var(--veryDarkBlueLine);
+}
+main .content .date div img {
+  margin-right: 5px;
+}
+main .content .date div:first-of-type p {
+  color: var(--cyan);
+  font-weight: 700;
+}
+main .content .date div:last-of-type p {
+  color: var(--SoftBlue);
+}
+main .content .footer {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+main .container .footer img {
+  height: 40px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+main .container .footer p {
+  flex: 1;
+  margin-left: 15px;
+  color: var(--SoftBlue);
+}
+main .container .footer p span {
+  color: var(--white);
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+main .container .footer p span:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 320px;
+  }
+  main .content h1 {
+    font-size: 20px;
+  }
+  main .content .description,
+  main .content .date,
+  main .footer p {
+    font-size: 17px;
+  }
+}
